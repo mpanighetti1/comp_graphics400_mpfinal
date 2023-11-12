@@ -1,0 +1,92 @@
+Parametrize this function in terms of (t) for X_c(t) and Y_c(t):
+
+Point A: (0,0)
+Point B: (4,0)
+Point C: (4.5,8.0)
+Point D: (5.0,8.5)
+Point E: (6.0,15.0)
+Point F: (5.9,15.0)
+Point G: (4.9,8.5)
+Point H: (4.4,8.0)
+Point I: (3.9,0.1)
+Point J: (0,0.1)
+
+// Function computes the x co-ordinate of the sectional curve in terms of the
+// length t measured from one end of the curve.
+float xc(float t)
+{
+    if (t <= 4.0) return t;
+    else if (t <= 8.0) return 4 + 0.5 * (t - 4) / 4;
+    else if (t <= 12.0) return 4.5 + (t - 8) / 4;
+    else if (t <= 16.0) return 5 + (t - 12) / 4;
+    else if (t <= 20.0) return 6 - 0.1 * (t - 16) / 4;
+    else if (t <= 24.0) return 5.9 - (t - 20) / 4;
+    else if (t <= 28.0) return 4.9 - 0.5 * (t - 24) / 4;
+    else if (t <= 32.0) return 4.4 - 3.4 * (t - 28) / 4;
+    else return 0.1 - 0.1 * (t - 32) / 3.9; // 38
+}
+
+// Function computes the y co-ordinate of the sectional curve in terms of the
+// length t measured from one end of the curve.
+float yc(float t)
+{
+    if (t <= 4.0) return 0.0;
+    else if (t <= 8.0) return 8 * (t - 4) / 4;
+    else if (t <= 12.0) return 8 + 0.5 * (t - 8) / 4;
+    else if (t <= 16.0) return 8.5 + 6.5 * (t - 12) / 4;
+    else if (t <= 20.0) return 15.0;
+    else if (t <= 24.0) return 15 - 6.5 * (t - 20) / 4;
+    else if (t <= 28.0) return 8.5 - 0.5 * (t - 24) / 4;
+    else if (t <= 32.0) return 8 - 4.1 * (t - 28) / 4;
+    else return 0.1 - 0.1 * (t - 32) / 3.9; // 38
+}
+
+Inner:
+Please provide a parameterization of a function in terms of increasing value (t) for X_c(t) and Y_c(t) 
+that connects the following points in order: Point A, Point B, ..., Point M. Here are the coordinates of the points:
+
+Point A: (0,0.11)
+Point B: (3.89,0.11)
+Point C: (4.39,8.0)
+Point D: (4.89,8.5)
+Point E: (5.9,15.0)
+Point F: (5.89,15.0)
+Point G: (6.1,15)
+Point H: (6.1,15.1)
+Point I: (5.84,15.1)
+Point J: (4.84,8.5)
+Point K: (4.34,8.0)
+Point L: (3.84,0.16)
+Point M: (0,0.16)
+
+// Function computes the x co-ordinate of the sectional curve in terms of the
+// length t measured from one end of the curve.
+float xc(float t)
+{
+    if (t <= 4.0) return t;
+    else if (t <= 8.0) return 4 + 0.5 * (t - 4) / 4;
+    else if (t <= 12.0) return 4.5 + (t - 8) / 4;
+    else if (t <= 16.0) return 5 + (t - 12) / 4;
+    else if (t <= 20.0) return 6 - 0.1 * (t - 16) / 4;
+    else if (t <= 24.0) return 5.9 - (t - 20) / 4;
+    else if (t <= 28.0) return 4.9 - 0.5 * (t - 24) / 4;
+    else if (t <= 32.0) return 4.4 - 3.4 * (t - 28) / 4;
+    else return 0.1 - 0.1 * (t - 32) / 3.9; // 38
+}
+
+// Function computes the y co-ordinate of the sectional curve in terms of the
+// length t measured from one end of the curve.
+float yc(float t)
+{
+    if (t <= 4.0) return 0.0;
+    else if (t <= 8.0) return 8 * (t - 4) / 4;
+    else if (t <= 12.0) return 8 + 0.5 * (t - 8) / 4;
+    else if (t <= 16.0) return 8.5 + 6.5 * (t - 12) / 4;
+    else if (t <= 20.0) return 15.0;
+    else if (t <= 24.0) return 15 - 6.5 * (t - 20) / 4;
+    else if (t <= 28.0) return 8.5 - 0.5 * (t - 24) / 4;
+    else if (t <= 32.0) return 8 - 4.1 * (t - 28) / 4;
+    else return 0.1 - 0.1 * (t - 32) / 3.9; // 38
+}
+
+Give the functions above as your response but converted to the new coordinates specified.
